@@ -37,7 +37,7 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
 
 
     else:
-        st.write("Unsupported file type")
+        st.write("One or more of your uploaded files is an unsupported format. Please ensure both files are .csv format.")
 else:
     st.write("Please upload a file to proceed.")
 
