@@ -28,7 +28,7 @@ def analyze_csv(uploaded_file):
             continue
     
     result_df = pd.DataFrame(list(totals.items()), columns=['Product Name', 'Total Cases Purchased'])
-    result_df = result_df.nlargest(15, 'Total')
+    result_df = result_df.nlargest(15, 'Total Cases Purchased')
     return result_df
 
 st.title("Client's Top 15")
