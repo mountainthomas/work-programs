@@ -27,12 +27,12 @@ def analyze_csv(uploaded_file):
         except (ValueError, TypeError):
             continue
     
-    result_df = pd.DataFrame(list(totals.items()), columns=['Name', 'Total'])
+    result_df = pd.DataFrame(list(totals.items()), columns=['Product Name', 'Total Cases Purchased'])
     result_df = result_df.nlargest(15, 'Total')
     return result_df
 
-st.title('CSV Analysis Tool')
-st.write('Upload a CSV file to analyze totals by name')
+st.title('Client's Top 15')
+st.write('Upload the .csv file downloaded from "Client Purchase Summary" report to view the top 15 SKUs purchased by that client with case values listed.')
 
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
